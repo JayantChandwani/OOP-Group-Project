@@ -1,7 +1,7 @@
 import pygame
 import sys
 from ludo.ludo import Ludo
-from flappybird.flappybird import FlappyBirdGame
+from flappybird.flappybird import FlappyBird
 from tetris.tetris import Tetris
 
 class Menu:
@@ -41,8 +41,9 @@ class Menu:
                             if(result == "menu"):
                                 continue
                         elif self.selected_option == 2:
-                            #FlappyBird()
-                            pass
+                            result = FlappyBird()
+                            if(result == "menu"):
+                                continue
                         elif self.selected_option == 3:
                             pygame.quit()
                             sys.exit()
